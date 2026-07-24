@@ -3,10 +3,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops-demo-stable
+  name: devops-demo0723-stable
 spec:
   selector:
-    app: devops-demo
+    app: devops-demo0723
     track: stable
   ports:
     - port: 8000
@@ -16,10 +16,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops-demo-canary
+  name: devops-demo0723-canary
 spec:
   selector:
-    app: devops-demo
+    app: devops-demo0723
     track: canary
   ports:
     - port: 8000
