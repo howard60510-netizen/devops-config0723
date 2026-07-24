@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devops-demo
+  name: devops-demo0723
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/4-learn/devops-config.git
+    repoURL: https://github.com/howard60510-netizen/devops-config0723.git
     targetRevision: HEAD
     path: k8s              # ← ArgoCD 盯這個資料夾
   destination:

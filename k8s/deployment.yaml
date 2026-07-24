@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-demo
+  name: devops-demo0723
   labels:
-    app: devops-demo
+    app: devops-demo0723
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: devops-demo
+      app: devops-demo0723
   template:
     metadata:
       labels:
-        app: devops-demo
+        app: devops-demo0723
     spec:
       containers:
-        - name: devops-demo
-          image: ghcr.io/4-learn/devops-demo:f513e5dfe6ffea34f5b6f1fdf8f413155fc2809a
+        - name: devops-demo0723
+          image: ghcr.io/howard60510-netizen/devops-demo0723:f513e5dfe6ffea34f5b6f1fdf8f413155fc2809a
           imagePullPolicy: Always
           ports:
             - containerPort: 8000

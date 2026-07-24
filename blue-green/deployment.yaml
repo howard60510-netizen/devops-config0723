@@ -4,18 +4,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-demo-blue
+  name: devops-demo0723-blue
 spec:
   replicas: 2
   selector:
-    matchLabels: {app: devops-demo, version: blue}
+    matchLabels: {app: devops-demo0723, version: blue}
   template:
     metadata:
-      labels: {app: devops-demo, version: blue}
+      labels: {app: devops-demo0723, version: blue}
     spec:
       containers:
         - name: devops-demo
-          image: ghcr.io/4-learn/devops-demo:latest
+          image: ghcr.io/howard60510-netizen/devops-demo0723:latest
           env:
             - {name: APP_VERSION, value: blue-v1}
           ports: [{containerPort: 8000}]
@@ -24,18 +24,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-demo-green
+  name: devops-demo0723-green
 spec:
   replicas: 2
   selector:
-    matchLabels: {app: devops-demo, version: green}
+    matchLabels: {app: devops-demo0723, version: green}
   template:
     metadata:
-      labels: {app: devops-demo, version: green}
+      labels: {app: devops-demo0723, version: green}
     spec:
       containers:
-        - name: devops-demo
-          image: ghcr.io/4-learn/devops-demo:latest
+        - name: devops-demo0723
+          image: ghcr.io/howard60510-netizen/devops-demo0723:latest
           env:
             - {name: APP_VERSION, value: green-v2}
           ports: [{containerPort: 8000}]
